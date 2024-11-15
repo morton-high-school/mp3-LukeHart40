@@ -4,11 +4,13 @@ public class Student{
     private double GPA;
     private Teacher favoriteTeacher;
     private static int students;
+    private static int Grade;
+    private static int points;
 
     public Student(String name){
         this.name = name;
         students++;
-        ID = (students -1);
+        ID = (students - 1);
     }
 
     //Getters
@@ -35,10 +37,11 @@ public class Student{
         this.favoriteTeacher = favoriteTeacher;
     }
 
-    //Methods
+    //Methods(Statics)
 
-    public static void addStudents(int students){
-        this.students += students;
+    public static void addStudents(int number){
+        students += number;
+        ID = (students - 1);
     }
 
     public static int getStudentCount(){
@@ -46,7 +49,11 @@ public class Student{
     }
 
     public void addGrade(int number){
-
+        if(number <= 4){
+            this.Grade++;
+            points += number;
+            this.GPA = points/this.Grade;
+        }
     }
 
 }

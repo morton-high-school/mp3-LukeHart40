@@ -73,12 +73,15 @@ public class StudentAutograder{
 
     if(!a){
       System.out.println("Failed First GPA Test");
+      System.out.println(one.getGPA());
     }
     if(!b){
       System.out.println("Failed Second GPA Test");
+      System.out.println(one.getGPA());
     }
     if(!c){
       System.out.println("Failed Third GPA Test");
+      System.out.println(one.getGPA());
     }
     if(a&&b&&c){
       System.out.println("All Student GPA Tests Passed");
