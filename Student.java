@@ -5,7 +5,7 @@ public class Student{
     private Teacher favoriteTeacher;
     private static int students;
     private static int Grade;
-    private static int points;
+    private static double points;
 
     public Student(String name){
         this.name = name;
@@ -27,14 +27,13 @@ public class Student{
         return GPA;
     }
 
-    public Teacher getFavoriteTeacher(){
-        return favoriteTeacher;
-    }
-
-    //Setters
-
     public void setFavoriteTeacher(Teacher favoriteTeacher){
         this.favoriteTeacher = favoriteTeacher;
+        this.favoriteTeacher.name = favoriteTeacher.getName();
+    }
+
+    public Teacher getFavoriteTeacher(){
+        return favoriteTeacher;
     }
 
     //Methods(Statics)
@@ -50,9 +49,9 @@ public class Student{
 
     public void addGrade(int number){
         if(number <= 4){
-            this.Grade++;
-            points += number;
-            this.GPA = points/this.Grade;
+            Grade++;
+            points += (double)(number);
+            GPA = points/Grade;
         }
     }
 
