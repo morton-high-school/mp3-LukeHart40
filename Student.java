@@ -27,9 +27,8 @@ public class Student{
         return GPA;
     }
 
-    public void setFavoriteTeacher(Teacher favoriteTeacher){
-        this.favoriteTeacher = favoriteTeacher;
-        this.favoriteTeacher.name = favoriteTeacher.getName();
+    public void setFavoriteTeacher(Teacher teach){
+        favoriteTeacher = teach;
     }
 
     public Teacher getFavoriteTeacher(){
